@@ -4,7 +4,7 @@ f2 = open("output.OUT", "w")
 D = f1.read().split(">")[1:]
 seq = "".join(map(str,D[0].split("\n")[1:-1]))
 motif = "".join(map(str,D[1].split("\n")[1:]))
-k = len(motif)
+k = len(motif)      
 
 def align(seq1, seq2):
     seq1 = " " + seq1
@@ -19,7 +19,6 @@ def align(seq1, seq2):
     #Needleman-Wunsch
     d = 1
     for i in range(1,n):
-        L[i][0] = 0
         Trace[i][0] = "U"
     for j in range(1,m):
         L[0][j] = L[0][j-1] -d
@@ -36,8 +35,6 @@ def align(seq1, seq2):
                 min_align = max((L[i-1][j], "U"), (L[i-1][j-1] + score_i_j, "D"), (L[i-1][j] - d, "U"), (L[i][j-1] -d, "L"))
             else:
                 min_align = max((L[i-1][j-1] + score_i_j, "D"), (L[i-1][j] - d, "U"), (L[i][j-1] -d, "L"))
-            if (j == 0):
-                min_align = (max((0, "."), min_align))
             L[i][j],Trace[i][j] = min_align	
     i = n-1
     j = m-1

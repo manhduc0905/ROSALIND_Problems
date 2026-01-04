@@ -21,7 +21,7 @@ def align(seq1, seq2):
     for i in range(1,n):
         Trace[i][0] = "U"
     for j in range(1,m):
-        L[0][j] = i*(-d)
+        L[0][j] = j*(-d)
         Trace[0][j] = "L"
 
     Trace[0][0] = "X"

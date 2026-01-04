@@ -19,8 +19,8 @@ def align(seq1, seq2):
         pre[0][j] = j*(-d)  
         suf[n][j] = (m - j)*(-d)
 
-    print(pre)
-    print(suf)
+    #print(pre)
+    #print(suf)
     for i in range(1,n):
         for j in range(1,m):
             score_i_j = 1 if (seq1[i] == seq2[j]) else -d
@@ -37,8 +37,8 @@ def align(seq1, seq2):
         for j in range(1,m):
             score_i_j = 1 if (seq1[i] == seq2[j]) else -d
             sum += pre[i-1][j-1] + suf[i+1][j+1] + score_i_j
-            print(pre[i-1][j-1] + suf[i+1][j+1] + score_i_j, end = " ")
-        print()
+            #print(pre[i-1][j-1] + suf[i+1][j+1] + score_i_j, end = " ")
+        #print()
     f2.write(f"{(pre[n-1][m-1])}\n")
     f2.write(f"{(sum)}\n")
 D = f1.read().split(">")[1:]
