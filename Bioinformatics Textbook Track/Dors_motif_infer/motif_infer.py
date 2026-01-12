@@ -1,3 +1,4 @@
+#!/usr/bin/env/python
 import os
 import numpy as np
 script_dir = os.path.dirname(os.path.abspath(__file__))
