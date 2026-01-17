@@ -1,0 +1,10 @@
+L-Val	V	99	Standard
+L-Orn	Orn	114	Non-Standard (Same mass as Asn)
+L-Leu	L	113	Standard
+D-Phe	F	147	Standard
+L-Pro	P	97	Standard
+L-Phe	F	147	Standard
+D-Phe	F	147	Standard
+L-Asn	N	114	Standard
+L-Gln	Q	128	Standard
+L-Tyr	Y	163	Standard
