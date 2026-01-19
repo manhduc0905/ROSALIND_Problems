@@ -28,6 +28,7 @@ for i in range(len(seq) - k + 1):
         if (hamming(seq[i:i+k], x) <= d):
             freq_map[x] += 1
             freq_map[revcomp(x)] += 1
+
 max_val = max(freq_map.values())
 for key,val in freq_map.items():
     if (val == max_val):

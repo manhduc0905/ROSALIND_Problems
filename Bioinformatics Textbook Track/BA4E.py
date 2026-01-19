@@ -47,6 +47,7 @@ def consistent(peptide, spectrum):
             return True
     if (sum(peptide) not in spectrum):
         return False
+    
     for k in range(n-1):
         for i in range(n - k + 1):
             if (sum(peptide[i:i+k+1]) not in spectrum):
@@ -56,20 +57,14 @@ def consistent(peptide, spectrum):
 def CycloSpectrum(peptide):
     n = len(peptide)
     spectrum = [0, sum(peptide)]
-    dummy_string= peptide + peptide[:n-1]
-    pre = [0]*n
-    pre[0] = aa_masses[dummy_string[0]]
-    for i in range(1,len(dummy_string)):
-        pre[i] = pre[i-1] + aa_masses[dummy_string[i]]
-
+    dummy = peptide + peptide[:n-1]
     for i in range(n):
         for k in range(n-1):
-            before = 0 if i == 0 else pre[i-1]
-            spectrum.append(pre[i+k] - before)
+            #print(k)
+            spectrum.append(sum(dummy[i:i+k+1]))
     spectrum.sort()
+
     return spectrum
-
-
 
 def CycloPeptideSequencing(spectrum):
     peptides = [[]]

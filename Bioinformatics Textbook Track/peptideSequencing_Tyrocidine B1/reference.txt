@@ -8,3 +8,11 @@ D-Phe	F	147	Standard
 L-Asn	N	114	Standard
 L-Gln	Q	128	Standard
 L-Tyr	Y	163	Standard
+
+97: 1 time
+99: 1 time
+113: 1 time
+114: 2 times
+128: 1 time
+147: 3 times
+163: 1 time

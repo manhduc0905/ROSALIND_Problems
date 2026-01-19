@@ -22,7 +22,7 @@ k = len(peptide)
 for i in range(len(dna_seq) - k*3 + 1):
     fwd_strand = dna_seq[i:i+k*3]
     rev_strand = revcomp(fwd_strand)
-    print(fwd_strand, rev_strand)
+    #print(fwd_strand, rev_strand)
     if (protein_seq(fwd_strand) == peptide or protein_seq(rev_strand) == peptide):
         f2.write(fwd_strand + '\n')
 

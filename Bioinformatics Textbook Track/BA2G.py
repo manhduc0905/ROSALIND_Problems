@@ -139,5 +139,5 @@ def consensus_string(motifs):
     
     return ''.join(consensus)
 final_motifs_set = GibbsSampler_search(N, N_GLOB = 100)[1]
-print(consensus_string(final_motifs_set))
+#print(consensus_string(final_motifs_set))
 f2.write('\n'.join(final_motifs_set))
